@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Shop at Egrociers for a convenient and hassle-free online grocery shopping experience"
+    />
+    <meta
+      name="keywords"
+      content="egrociers, online grocery, grocery store, revou, fcse mini project"
+    />
+    <title>E-Grociers Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="icon" href="./assets/favicon.png" type="image/png" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.0/feather.min.js"
+      integrity="sha512-24XP4a9KVoIinPFUbcnjIjAjtS59PUoxQj3GNVpWc86bCqPuy3YxAcxJrxFCxXe4GHtAumCbO2Ze2bddtuxaRw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="navbar">
+          <div class="logo">
+            <img src="./assets/logo.svg" alt="E-Grociers logo" />
+          </div>
+          <button
+            class="menu-button"
+            id="menu-button"
+            onclick="toggleMenuButton()"
+          >
+            <i data-feather="menu"></i>
+          </button>
+          <ul class="navigation-list" id="menu-list">
+            <li><a href="#hero" onclick="setTitle(this)">Beranda</a></li>
+            <li>
+              <a href="#our-package" onclick="setTitle(this)">Paket Kami</a>
+            </li>
+            <li><a href="#call-us" onclick="setTitle(this)">Hubungi Kami</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="main-content">
+      <div class="hero" id="hero">
+        <div class="hero-slider" id="hero-slider">
+          <img id="slide1" src="./assets/images/gambar1.jpg" alt="" />
+          <img id="slide2" src="./assets/images/gambar2.jpg" alt="" />
+          <img id="slide3" src="./assets/images/gambar3.jpg" alt="" />
+          <img id="slide4" src="./assets/images/gambar4.jpg" alt="" />
+          <img id="slide5" src="./assets/images/gambar5.jpg" alt="" />
+          <img id="slide6" src="./assets/images/gambar6.jpg" alt="" />
+          <img id="slide7" src="./assets/images/gambar7.jpg" alt="" />
+        </div>
+        <div class="hero-wrapper">
+          <h1 class="main-title">Toko E-Groser Terbaik di Indonesia</h1>
+          <p class="hero-description">Setiap Hari Kami Menyiapkan Sayuran Yang Menyegarkan</p>
+          <button class="button" onclick="getStartButton()">
+            Ayo Mulai!
+          </button>
+        </div>
+      </div>
+      <div class="container">
+        <div class="about-contact" id="about">
+          <div class="about">
+            <img
+              src="./assets/images/gambar_inti.jpg"
+              alt="A beach in Bali during dusk, with some peoples playing"
+              class="about-img"
+            />
+            <p class="about-caption">
+              Setiap hari beli sayur buah yang fresh disini
+            </p>
+            <div class="about-author">
+              <img src="./assets/images/ferrari-rungkad.jpeg" alt="" class="author-img" />
+              <div class="author-data">
+                <div class="author-name">Tifosi</div>
+                <div class="author-info">Ibu Rumah Tangga, 28</div>
+              </div>
+            </div>
+            <hr class="border" />
+            <div class="feature">
+              <h2 class="subsection-title">
+                Beberapa keuntungan yang Anda akan dapatkan dengan menggunakan
+                jasa kami:
+              </h2>
+              <div class="feature-list">
+                <div class="feature-item">
+                  <div class="feature-icon">
+                    <i data-feather="globe"></i>
+                  </div>
+                  <div class="feature-description">
+                    Tersedia perjalanan ke banyak tempat destinasi terbaik di
+                    dunia
+                  </div>
+                </div>
+                <div class="feature-item">
+                  <div class="feature-icon">
+                    <i data-feather="globe"></i>
+                  </div>
+                  <div class="feature-description">
+                    Pemesanan dan pembayaran yang mudah, cepat, dan dapat
+                    dilakukan kapan saja dan dimana saja
+                  </div>
+                </div>
+                <div class="feature-item">
+                  <div class="feature-icon">
+                    <i data-feather="globe"></i>
+                  </div>
+                  <div class="feature-description">
+                    Ada tawaran-tawaran menarik yang menanti untuk perjalanan
+                    Anda selanjutnya
+                  </div>
+                </div>
+                <div class="feature-item">
+                  <div class="feature-icon">
+                    <i data-feather="globe"></i>
+                  </div>
+                  <div class="feature-description">
+                    Uang kembali hingga 90% jika Anda batal melakukan perjalanan
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="contact">
+            <h2 class="subsection-title">Hubungi Kami</h2>
+            <p>
+              Sales akan menghubungi Anda 1x24 jam setelah data anda kami terima
+            </p>
+            <form
+              class="contact-form"
+              name="contact-form"
+              onsubmit="return validateForm()"
+            >
+              <div class="form-field">
+                <label for="name" class="input-label">Masukkan Nama Anda:</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  class="input-field"
+                  placeholder="First name and last name"
+                  oninput="fillInput('name')"
+                />
+                <p class="error-msg" id="name-error">Tolong isi nama anda</p>
+              </div>
+              <div class="form-field">
+                <label for="email" class="input-label">Alamat Email:</label>
+                <input
+                  type="text"
+                  id="email"
+                  name="email"
+                  class="input-field"
+                  placeholder="example@email.com"
+                  oninput="fillInput('email')"
+                />
+                <p class="error-msg" id="email-error">
+                  tolong masukkan email dengan benar
+                </p>
+              </div>
+              <div class="form-field">
+                <label for="interest" class="input-label"
+                  >Apa yang anda inginkan?</label
+                >
+                <select
+                  id="interest"
+                  name="interest"
+                  class="input-field"
+                  oninput="selectInterest()"
+                >
+                  <option value="none" selected disabled>Pilih Opsi</option>
+                  <option value="option 1">
+                    Sayur Bayam
+                  </option>
+                  <option value="option 2">
+                    Sayur Kangkung
+                  </option>
+                  <option value="option 3">
+                    Sayur Tomat
+                  </option>
+                </select>
+                <p class="error-msg" id="interest-error">
+                  Please select one interest
+                </p>
+              </div>
+              <button type="submit" class="button">Send</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="package" id="our-package">
+        <div class="package-banner">
+          <div class="container">
+            <h2 class="section-title">Paket Kami</h2>
+          </div>
+        </div>
+        <div class="container">
+          <div class="package-list">
+            <div class="package-item">
+              <div class="package-icon">
+                <i data-feather="thumbs-up"></i>
+              </div>
+              <div class="package-content">
+                <h3>Sayuran Segar</h3>
+                <p>Sayuran segar langsung dari sumber pertanian terbaik</p>
+              </div>
+            </div>
+            <div class="package-item">
+              <div class="package-icon">
+                <i data-feather="thumbs-up"></i>
+              </div>
+              <div class="package-content">
+                <h3>Buah Segar</h3>
+                <p>
+                  Buah dengan kualitas terbaik dari local atau import dan harga
+                  yang menarik
+                </p>
+              </div>
+            </div>
+            <div class="package-item">
+              <div class="package-icon">
+                <i data-feather="thumbs-up"></i>
+              </div>
+              <div class="package-content">
+                <h3>Pengiriman Cepat</h3>
+                <p>
+                  Di kirim instan oleh kurir yang telah di training dengan SOP
+                  untuk menjaga kondisi belanja kamu
+                </p>
+              </div>
+            </div>
+          </div>
+          <hr class="border" />
+          <div class="package-list">
+            <div class="package-item">
+              <div class="package-icon">
+                <i data-feather="star"></i>
+              </div>
+              <div class="package-content">
+                <h3>Bumbu Dapur</h3>
+                <p>Bumbu dapur lengkap untuk keperluan memasak kamu</p>
+              </div>
+            </div>
+            <div class="package-item">
+              <div class="package-icon">
+                <i data-feather="star"></i>
+              </div>
+              <div class="package-content">
+                <h3>Perlengkapan Dapur</h3>
+                <p>Segala jenis alat masa untuk membantu kamu memasak</p>
+              </div>
+            </div>
+            <div class="package-item">
+              <div class="package-icon">
+                <i data-feather="star"></i>
+              </div>
+              <div class="package-content">
+                <h3>Perlengkapan Lengkap</h3>
+                <p>
+                  Bingung masak apa? sudah tersedia paket untuk kamu masak di
+                  dapur mu
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cta" id="call-us">
+        <div class="container">
+          <h2 class="section-title">Hubungi Kami Sekarang Juga</h2>
+          <p>
+            Ingin memesan perjalanan? Ada kendala yang perlu dibantu? Silakan
+            hubungi kami dengan menekan tombol di bawah ini
+          </p>
+          <button class="button">Hubungi Kami</button>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="logo">
+          <img src="./assets/logo.svg" alt="E-Grociers logo" width="165" />
+        </div>
+        <ul class="footer-navigation">
+          <li><a href="#">Layanan Kami</a></li>
+          <li><a href="#">Kebijakan kami</a></li>
+        </ul>
+        <div>
+          © 2023 <a href="">Zahran Rafif Zuhayr</a>
+        </div>
+      </div>
+    </footer>
+    <script>
+      feather.replace();
+    </script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
